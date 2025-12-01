@@ -1,8 +1,10 @@
-# projeto-sistemas-digitais
+# Plantagochi
 Atividade Cesar School
 
+O Plantagochi é um projeto de vaso inteligente utilizando Arduino que visa resolver o problema de esquecimento ou desconhecimento sobre as necessidades de rega das plantas. Ele serve como um "digital pet" no mundo real, monitorando a umidade do solo e indicando visualmente o estado da planta.
 
-# Canva de Modelagem Prática: Plantagochi
+
+# Canva de Modelagem Prática
 ## Descrição
 O Plantagochi é um projeto de vaso inteligente que visa resolver o problema de esquecimento ou desconhecimento sobre as necessidades de rega das plantas. Ele serve como um "digital pet" no mundo real, monitorando a umidade do solo e indicando visualmente o estado da planta.
 A ideia é misturar características de pets digitais e colecionáveis digitais com o mundo real. Para o MVP (Mínimo Produto Viável), o projeto se concentra em fornecer uma interface local de monitoramento e rega. Futuramente, o conceito pode ser expandido para modelar diversas espécies de plantas e incluir comunicação à distância.
@@ -16,7 +18,8 @@ A ideia é misturar características de pets digitais e colecionáveis digitais 
 - Resolver o problema de rega inadequada ou esquecimento por parte do usuário.
 
 ## Funcionamento
-### 1. Inicialização: O Arduino inicia, calibra o sensor de umidade (se necessário) e verifica o estado inicial.
+### 1. Inicialização:
+O Arduino inicia, garantindo que a bomba está desligada e configurando os pinos necessários.
 
 ### 2. Monitoramento:
 - O Arduino lê continuamente o valor do Sensor de Umidade do Solo.
@@ -57,7 +60,11 @@ LED VERMELHO: Solo enxarcada (Planta sobrecarregada).
 - Mangueira fina (4mm)
 
 ## Protótipo
-// falta colocar
+// falta colocar um esquema do prototipo (tipo print do tinkercad)
 
 ## Equipe
-// falta colocar
+- Lucas Bonfim (Líder Técnico) | [Linkedin](https://br.linkedin.com/in/l-bonfim), [Github](https://github.com/l-bonfim)
+- Lucas Carvalho | [Linkedin](), [Github](https://github.com/J4keless)
+- Lucas Valença | [Linkedin](), [Github](https://github.com/LucasGuilhermeValenca)
+- Leo Sk8 | [Linkedin](), [Github]()
+- Miguel Duarte | [Linkedin](https://br.linkedin.com/in/miglitopictures), [Github](https://github.com/miglitopictures)
