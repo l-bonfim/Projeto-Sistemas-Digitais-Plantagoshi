@@ -1,0 +1,33 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+}
+
+h1{
+    text-align: center;
+    margin: 0%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav li{
+    display: inline;
+}
+main{
+    max-width: 800px;
+    margin: 0px auto;
+}

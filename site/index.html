@@ -1,15 +1,187 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Plantagochi</title>
+    <title>Plantagochi - Vaso Inteligente</title>
+    <link rel="stylesheet" href="./css/style.css"> 
 </head>
 <body>
-    
+
+    <header id="nome-projeto">
+        <img style="width: 200px; image-rendering: pixelated;" src="./img/mascot.png" alt="Pixel art logo de uma planta com um sorriso.">
+        <h1>PLANTAGOCHI: Vaso Inteligente Interativo</h1>
+        <nav>
+        <ul>
+            <li><a href="#descricao">Descrição</a></li>
+            <li><a href="#componentes">Componentes</a></li>
+            <li><a href="#montagem">Passo a Passo</a></li>
+            <li><a href="#codigo">Código</a></li>
+            <li><a href="#autores">Autores</a></li>
+        </ul>
+    </nav>
+    </header>
 
     
+
+    <main>
+        
+        <section id="descricao">
+            <div class="contexto-projeto">
+                <p>O Plantagochi visa auxiliar na rega adequada, transformando o cuidado com a planta em uma interação divertida. Ele monitora a umidade do solo e fornece feedback visual para garantir a saúde da planta. O projeto se insere na área de IoT básica e Automação Residencial.</p>
+            </div>
+            <div class="esquema-conceitual">
+                <h3>Esquema Conceitual</h3>
+                <p>O diagrama de blocos abaixo ilustra a interconexão dos principais elementos do sistema: Sensor de Umidade (Entrada), Arduino (Processamento) e LEDs/Bomba (Saídas).</p>
+                
+                <img src="esquema_conceitual.png" alt="Esquema Conceitual do Plantagochi">
+            </div>
+            <div class="palavras-chave">
+                <h3>Palavras-chave</h3>
+                <p>Arduino, Jardinagem Inteligente, IoT, Monitoramento de Umidade, Sistemas Digitais.</p>
+            </div>
+        </section>
+
+        <section id="componentes">
+            <h2>Componentes e Suprimentos</h2>
+            <p>Lista detalhada de todos os itens utilizados.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Descrição</th>
+                        <th>Referência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Placa Arduino</td>
+                        <td>Microcontrolador principal.</td>
+                        <td>Arduino Uno R3</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor de Umidade do Solo</td>
+                        <td>Mede a umidade do solo.</td>
+                        <td>Sensor Capacitivo</td>
+                    </tr>
+                    <tr>
+                        <td>LEDs</td>
+                    </tr>
+                    <tr>
+                        <td>Mini Bomba d'água</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Módulo Relé</td>
+                    </tr>
+                    <tr>
+                        <td>Mangueira 4mm</td>
+                    </tr>
+                    <tr>
+                        <td>Reservatório</td>
+                    </tr>
+                    </tbody>
+            </table>
+            
+            <h3>Aplicativos e Plataformas</h3>
+            <ul>
+                <li>Arduino IDE</li>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>GitHub (Controle de Versão)</li>
+            </ul>
+        </section>
+
+        <section id="montagem">
+            <h2>Passo a Passo da Montagem</h2>
+            <p>Instruções claras e detalhadas para replicação do projeto, incluindo imagens em cada passo.</p>
+            
+            <ol>
+                <li>
+                    <h4>Conexão dos LEDs</h4>
+                    <p>Ligue os LEDs (com resistores) aos pinos digitais do Arduino (Ex: D2, D3, D4).</p>
+                    <img src="passo1_leds.png" alt="Diagrama de conexão dos LEDs">
+                </li>
+                <li>
+                    <h4>Conexão do Sensor de Umidade</h4>
+                    <p>Conecte o pino analógico do sensor à porta A0 do Arduino.</p>
+                    <img src="passo2_sensor.png" alt="Diagrama de conexão do sensor">
+                </li>
+                </ol>
+        </section>
+
+        <section id="codigo">
+            <h2>Código do Projeto</h2>
+            <p>Trechos de código essenciais (snippets) com formatação adequada e explicação das partes importantes.</p>
+            
+            <h3>Snippet: Leitura do Sensor e Lógica dos LEDs</h3>
+            <pre>
+                <code>
+                    // Variáveis de definição de pinos
+                    #define PINO_SENSOR A0
+                    #define LED_VERMELHO 2
+                    // ...
+                    
+                    void loop() {
+                        int umidade = analogRead(PINO_SENSOR);
+                        
+                        if (umidade &lt; 300) {
+                            // Planta com sede: LED Vermelho
+                            digitalWrite(LED_VERMELHO, HIGH);
+                        } 
+                        // ...
+                    }
+                </code>
+            </pre>
+            <p><strong>Explicação:</strong> A função <code>analogRead()</code> lê o valor do sensor de umidade, que é então comparado com limiares definidos para acionar o LED correspondente, indicando o estado da planta.</p>
+
+            <p>Link para o repositório completo do código no GitHub:</p>
+            <a href="https://github.com/l-bonfim/Projeto-Sistemas-Digitais-Plantagoshi" target="_blank">Acessar Código Completo no GitHub</a>
+        </section>
+
+        <section id="video">
+            <h2>Vídeo Tutorial</h2>
+            <p>Assista ao vídeo da equipe explicando e demonstrando o projeto em funcionamento.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="URL_DO_SEU_VIDEO_YOUTUBE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="licoes">
+            <h2>Problemas e Lições Aprendidas</h2>
+            
+            <h3>Desafios Enfrentados</h3>
+            <ul>
+                <li>**Problema:** A bomba não acionava corretamente com o 5V do Arduino.</li>
+                <li>**Resolução:** Foi necessário incorporar um módulo relé e uma fonte de alimentação externa para a bomba.</li>
+            </ul>
+            
+            <h3>Principais Lições</h3>
+            <p>Aprendeu-se a importância da correta **calibração de sensores** e o uso estratégico de **componentes de acionamento** (relés) para lidar com atuadores de maior potência.</p>
+        </section>
+
+        <section id="download">
+            <h2>Download</h2>
+            <p>Baixe o arquivo .zip contendo todos os códigos, esquemas e instruções necessárias para replicar o Plantagochi.</p>
+            <a href="plantagochi_projeto.zip" class="btn-download" download>Baixar Projeto Completo (.zip)</a>
+        </section>
+
+    </main>
+
+    <footer id="autores">
+        <h2>Autores</h2>
+        <div class="equipe">
+            <div class="membro">
+                <img src="foto_autor1.jpg" alt="Foto Autor 1">
+                <h4>Nome do Autor 1</h4>
+                <p>
+                    <a href="LINK_GITHUB_1" target="_blank">GitHub</a> | 
+                    <a href="LINK_LINKEDIN_1" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+        <p>Desenvolvido para a disciplina de Introdução à Computação (IC) e Sistemas Digitais (SD) - 2025.2.</p>
+    </footer>
+
     <script src="./src/script.js"></script>
 </body>
 </html>
