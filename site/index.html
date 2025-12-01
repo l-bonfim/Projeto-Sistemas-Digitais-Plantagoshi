@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantagochi - Vaso Inteligente</title>
+    <title>Plantagochi</title>
     <link rel="stylesheet" href="./css/style.css"> 
 </head>
 <body>
@@ -34,7 +34,7 @@
                 <h3>Esquema Conceitual</h3>
                 <p>O diagrama de blocos abaixo ilustra a interconexão dos principais elementos do sistema: Sensor de Umidade (Entrada), Arduino (Processamento) e LEDs/Bomba (Saídas).</p>
                 
-                <img src="esquema_conceitual.png" alt="Esquema Conceitual do Plantagochi">
+                <img src="./img/temp_esquema_conceitual.png" alt="Esquema Conceitual do Plantagochi">
             </div>
             <div class="palavras-chave">
                 <h3>Palavras-chave</h3>
@@ -57,7 +57,7 @@
                     <tr>
                         <td>Placa Arduino</td>
                         <td>Microcontrolador principal.</td>
-                        <td>Arduino Uno R3</td>
+                        <td>Blackboard (...)</td>
                     </tr>
                     <tr>
                         <td>Sensor de Umidade do Solo</td>
@@ -66,19 +66,30 @@
                     </tr>
                     <tr>
                         <td>LEDs</td>
+                        <td>Amarelo, Verde e Vermelho</td>
+                        <td>Kit Blackboard</td>
                     </tr>
                     <tr>
                         <td>Mini Bomba d'água</td>
+                        <td>5V</td>
+                        <td>(...)</td>
+                        
                     </tr>
                     
                     <tr>
                         <td>Módulo Relé</td>
+                        <td>(...)</td>
+                        <td>(...)</td>
                     </tr>
                     <tr>
                         <td>Mangueira 4mm</td>
+                        <td>30cm</td>
+                        <td>(...)</td>
                     </tr>
                     <tr>
                         <td>Reservatório</td>
+                        <td>Pote de sorvete</td>
+                        <td>Pavê</td>
                     </tr>
                     </tbody>
             </table>
@@ -91,73 +102,188 @@
             </ul>
         </section>
         <hr>
+        
         <section id="montagem">
-            <h2>Passo a Passo da Montagem</h2>
-            <p>Instruções claras e detalhadas para replicação do projeto, incluindo imagens em cada passo.</p>
+            <h2>Passo a Passo</h2>
+            <p>Instruções para montagem do seu Plantagochi.</p>
             
             <ol>
                 <li>
-                    <h4>Conexão dos LEDs</h4>
-                    <p>Ligue os LEDs (com resistores) aos pinos digitais do Arduino (Ex: D2, D3, D4).</p>
-                    <img src="passo1_leds.png" alt="Diagrama de conexão dos LEDs">
+                    <h4>Preparo do Reservatório</h4>
+                    <p><strong>Posicione a Mini Bomba d'água</strong> dentro do reservatório e fixe a mangueira na saída. Certifique-se de que a bomba esteja submersa quando o reservatório estiver com água.</p>
+                    <img src="passo1_reservatorio.png" alt="Diagrama de conexão dos LEDs">
+                </li>
+                <li>
+                    <h4>Arduino na protoboard</h4>
+                    <p>Conecte o Arduino e a protoboard e crie as trilhas de alimentação (<b>5V</b>) e terra (<b>GND</b>) utilizando os jumpers. Isso facilitará as conexões dos demais componentes.</p>
+                    <img src="passo2_arduino.png" alt="Diagrama de conexão dos LEDs">
+                </li>
+                <li>
+                    <h4>Conexão dos LEDs e Resitores</h4>
+                    <p>Ligue os <b>LEDs (com resistores de 220Ω ou similar)</b> aos pinos digitais do Arduino (Ex: D2, D3, D4). O cátodo (perna menor) de cada LED deve ir para o GND.</p>
+                    <img src="passo3_leds.png" alt="Diagrama de conexão dos LEDs">
+                </li>
+                <li>
+                    <h4>Conexão do Botão</h4>
+                    <p>Conecte um <b>botão de pressão</b> (para acionamento manual da bomba ou <b>reset</b> ) ao pino digital D7 do Arduino e à linha de GND, utilizando a configuração <b>pull-up</b> no código ou um resistor <b>pull-down</b> físico.</p>
+                    <img src="passo4_button.png" alt="Diagrama de conexão do sensor">
                 </li>
                 <li>
                     <h4>Conexão do Sensor de Umidade</h4>
-                    <p>Conecte o pino analógico do sensor à porta A0 do Arduino.</p>
-                    <img src="passo2_sensor.png" alt="Diagrama de conexão do sensor">
+                    <p>Conecte o pino analógico do sensor de umidade capacitivo à porta <b>A0 do Arduino</b>. O VCC e GND do sensor devem ser conectados à alimentação do circuito (5V e GND).</p>
+                    <img src="passo5_sensor.png" alt="Diagrama de conexão do sensor">
                 </li>
-                </ol>
+                <li>
+                    <h4>Conexão da Bomba e Relay</h4>
+                    <p>Conecte o <b>Módulo Relé</b> a um pino digital do Arduino (Ex: D8). O relé deve ser ligado à bomba e à <b>fonte de alimentação externa</b> para isolar o Arduino da carga de alta corrente da bomba.</p>
+                    <img src="passo6_bomba.png" alt="Diagrama de conexão do sensor">
+                </li>
+                <li>
+                    <h4>Conexão da Fonte Externa</h4>
+                    <p>Ligue a <b>fonte de alimentação externa</b> (geralmente 9V ou 12V) ao circuito de alta potência, que inclui o Módulo Relé e a Mini Bomba. O Arduino pode ser alimentado via USB ou pela própria fonte externa regulada.</p>
+                    <img src="passo7_fonte.png" alt="Diagrama de conexão do sensor">
+                </li>
+                <li>
+                    <h4>Inserção do sensor de humidade</h4>
+                    <p>Insira o sensor de umidade na terra da planta.</p>
+                    <img src="passo8_planta.png" alt="Diagrama de conexão do sensor">
+                </li>
+            </ol>
         </section>
         <hr>
-        <section id="codigo">
-            <h2>Código do Projeto</h2>
-            <p>Trechos de código essenciais (snippets) com formatação adequada e explicação das partes importantes.</p>
-            
-            <h3>Snippet: Leitura do Sensor e Lógica dos LEDs</h3>
-            <pre>
-                <code>
-                    // Variáveis de definição de pinos
-                    #define PINO_SENSOR A0
-                    #define LED_VERMELHO 2
-                    // ...
-                    
-                    void loop() {
-                        int umidade = analogRead(PINO_SENSOR);
-                        
-                        if (umidade &lt; 300) {
-                            // Planta com sede: LED Vermelho
-                            digitalWrite(LED_VERMELHO, HIGH);
-                        } 
-                        // ...
-                    }
-                </code>
-            </pre>
-            <p><strong>Explicação:</strong> A função <code>analogRead()</code> lê o valor do sensor de umidade, que é então comparado com limiares definidos para acionar o LED correspondente, indicando o estado da planta.</p>
+<section id="codigo">
+    <h2>Código do Projeto</h2>
+    <p>Aqui está o código principal do projeto Plantagochi na sua versão MVP (Produto Mínimo Viável). Este código, desenvolvido para a plataforma Arduino, é o cérebro do nosso sistema de monitoramento da planta. Ele é responsável por ler a umidade do solo, determinar o estado de saúde da planta (Seco, Saudável ou Afogando) e controlar os atuadores (LEDs de status e a bomba d'água) com base nas leituras.</p>
+    
+    <h3>Configuração de Pinos</h3>
+    <pre>
+        <code>
+            // PINS
+            int PINO_BOMBA = 9;
+            int PINO_SENSOR = A1;
+            int PINO_BOTAO_REGA = 13;
 
-            <p>Link para o repositório completo do código no GitHub:</p>
-            <a href="https://github.com/l-bonfim/Projeto-Sistemas-Digitais-Plantagoshi" target="_blank">Acessar Código Completo no GitHub</a>
-        </section>
-        <hr>
-        <section id="video">
-            <h2>Vídeo Tutorial</h2>
-            <p>Assista ao vídeo da equipe explicando e demonstrando o projeto em funcionamento.</p>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qs_-emj1qR4" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-        <hr>
-        <section id="licoes">
-            <h2>Problemas e Lições Aprendidas</h2>
-            
-            <h3>Desafios Enfrentados</h3>
-            <ul>
-                <li><b>Problema:</b> A bomba não acionava corretamente com o 5V do Arduino.</li>
-                <li><b>Resolução:</b> Foi necessário incorporar um módulo relé e uma fonte de alimentação externa para a bomba.</li>
-            </ul>
-            
-            <h3>Principais Lições</h3>
-            <p>Aprendeu-se a importância da correta **calibração de sensores** e o uso estratégico de **componentes de acionamento** (relés) para lidar com atuadores de maior potência.</p>
-        </section>
+            int PINO_LED_1 = 1; // LED SECO
+            int PINO_LED_2 = 2; // LED SAUDÁVEL
+            int PINO_LED_3 = 3; // LED AFOGANDO
+        </code>
+    </pre>
+    <p>Define as variáveis de pinos do Arduino, mapeando cada componente físico (Bomba, Sensor de Umidade, Botão de Rega e LEDs de Status) para seu respectivo pino digital ou analógico.</p>
+
+    <h3>setup()</h3>
+    <pre>
+        <code>
+            void setup() {
+                Serial.begin(9600);
+                // SETUP DOS PINS
+                pinMode(PINO_SENSOR, INPUT);
+                pinMode(PINO_BOMBA, OUTPUT);
+                pinMode(PINO_LED_1, OUTPUT);
+                pinMode(PINO_LED_2, OUTPUT);
+                pinMode(PINO_LED_3, OUTPUT);
+                pinMode(PINO_BOTAO_REGA, INPUT);
+                
+                // GARANTIR QUE A BOMBA COMEÇA DESLIGADA
+                digitalWrite(PINO_BOMBA, LOW);
+            }
+        </code>
+    </pre>
+    <p>Inicializa a comunicação serial (Serial.begin(9600)) e configura o modo de operação de cada pino (INPUT para sensor/botão, OUTPUT para bomba/LEDs). Garante que a bomba comece desligada.</p>
+    
+    <h3>Leitura do Sensor</h3>
+    <pre>
+        <code>
+            int lerUmidade() {
+                // ler o sensor e mapear a umidade para um valor utilizavel
+                int umidade_cru = analogRead(PINO_SENSOR);
+                // Mapeia de 0-1023 (bruto) para 0-100 (utilizável)
+                int umidade = map(umidade_cru, 0, 1023, 255, 0); 
+                return umidade;
+            }
+        </code>
+    </pre>
+    <p>Realiza a leitura da porta analógica (analogRead()) do sensor de umidade. Em seguida, usa a função map() para converter o valor bruto (0-1023) em uma escala mais utilizável e intuitiva (por exemplo, 0-100), facilitando a definição dos limiares de estado.</p>
+    
+    <h3>Estados</h3>
+    <pre>
+        <code>
+            int atualizarEstado() {
+                int estado;
+                if (umidade_atual < 20) {
+                    estado = 1;           // SECO
+                } else if (umidade_atual < 60) {
+                    estado = 2;           // SAUDAVEL
+                } else {
+                    estado = 3;           // AFOGANDO
+                }
+                return estado;
+            }
+        </code>
+    </pre>
+    <p>Define o estado de saúde da planta (1: Seco, 2: Saudável, 3: Afogando) comparando a umidade_atual com limiares fixos (20 e 60). Este valor é usado para controlar qual LED será aceso.</p>
+
+    <h3>Rega</h3>
+    <pre>
+        <code>
+            void iniciarRega() {
+            // inicia o ciclo de rega
+                if (umidade_atual < 50 && millis() - ultima_rega > intervalo) {
+                    ligarBomba();
+                    delay(tempo_rega);
+                    desligarBomba();
+                    ultima_rega = millis();
+                }
+            }
+
+            void ligarBomba() {
+                digitalWrite(PINO_BOMBA, HIGH);
+            }
+
+            void desligarBomba() {
+                digitalWrite(PINO_BOMBA, LOW);
+            }
+        </code>
+    </pre>
+    <p>Contém a lógica para acionamento da bomba. Verifica duas condições para rega automática: 1) se a umidade está abaixo do limite (50) e 2) se o intervalo de tempo mínimo (intervalo) entre as regas já passou, prevenindo que a planta seja encharcada.</p>
+    
+    <h3>loop()</h3>
+    <pre>
+        <code>
+            void loop() {
+                umidade_atual = lerUmidade();
+                estado_atual = atualizarEstado();
+                enviarEstadoParaApp(); // No MVP, usa Leds
+                verificarComandos();   // checa se o user apertou o BOTAO_REGA
+                delay(500);
+            }
+        </code>
+    </pre>
+    <p>É a função principal que executa repetidamente. Chama as funções de leitura, atualização de estado e verificação de comandos em um ciclo contínuo, com um pequeno atraso (delay(500)) entre as iterações para estabilidade do sistema.</p>
+
+    <p>Link para o repositório completo do código no GitHub:</p>
+    <a href="https://github.com/l-bonfim/Projeto-Sistemas-Digitais-Plantagoshi" target="_blank">Acessar Código Completo no GitHub</a>
+</section>
+<hr>
+<section id="video">
+    <h2>Vídeo Tutorial</h2>
+    <p>Assista ao vídeo da equipe explicando e demonstrando o projeto em funcionamento.</p>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qs_-emj1qR4" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+<hr>
+<section id="licoes">
+    <h2>Problemas e Lições Aprendidas</h2>
+    
+    <h3>Desafios Enfrentados</h3>
+    <ul>
+        <li><b>Problema:</b> A bomba não acionava corretamente com o 5V do Arduino.</li>
+        <li><b>Resolução:</b> Foi necessário incorporar um módulo relé e uma fonte de alimentação externa para a bomba.</li>
+    </ul>
+    
+    <h3>Principais Lições</h3>
+    <p>Aprendeu-se a importância da correta <b>calibração de sensores</b> e o uso estratégico de <b>componentes de acionamento</b> (relays) para lidar com atuadores de maior potência. Administração de tempo e trabalho em equipe!</p>
+</section>
         <hr>
         <section id="download">
             <h2>Download</h2>
@@ -171,11 +297,43 @@
         <h2>Autores</h2>
         <div class="equipe">
             <div class="membro">
-                <img src="foto_autor1.jpg" alt="Foto Autor 1">
-                <h4>Nome do Autor 1</h4>
+                <img src="./img/Bonfim.jpeg" alt="Foto Autor 1">
+                <h4>Lucas Bonfim Gomes</h4>
+                <p>
+                    <a href="https://github.com/l-bonfim" target="_blank">GitHub</a> | 
+                    <a href="https://br.linkedin.com/in/l-bonfim" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+            <div class="membro">
+                <img src="./img/Carvalho.jpg" alt="Foto Autor 1">
+                <h4>Lucas Moreira de Carvalho</h4>
+                <p>
+                    <a href="https://github.com/J4keless" target="_blank">GitHub</a> | 
+                    <a href="LINK_LINKEDIN_1" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+            <div class="membro">
+                <img src="./img/Valenca.jpeg" alt="Foto Autor 1">
+                <h4>Lucas Valença</h4>
+                <p>
+                    <a href="https://github.com/LucasGuilhermeValenca" target="_blank">GitHub</a> | 
+                    <a href="LINK_LINKEDIN_1" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+            <div class="membro">
+                <img src="./img/temp_autor_00.jpeg" alt="Foto Autor 1">
+                <h4>Leo Skate</h4>
                 <p>
                     <a href="LINK_GITHUB_1" target="_blank">GitHub</a> | 
                     <a href="LINK_LINKEDIN_1" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+            <div class="membro">
+                <img src="./img/Duarte.jpg" alt="Foto Autor 1">
+                <h4>Miguel Duarte</h4>
+                <p>
+                    <a href="https://github.com/miglitopictures" target="_blank">GitHub</a> | 
+                    <a href="https://br.linkedin.com/in/miglitopictures" target="_blank">LinkedIn</a>
                 </p>
             </div>
         </div>
