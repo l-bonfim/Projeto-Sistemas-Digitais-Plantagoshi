@@ -1,14 +1,9 @@
 # Plantagochi
-Atividade Cesar School
+Atividade Cesar School para disciplina de Sistemas Digitais.
 
-O Plantagochi é um projeto de vaso inteligente utilizando Arduino que visa resolver o problema de esquecimento ou desconhecimento sobre as necessidades de rega das plantas. Ele serve como um "digital pet" no mundo real, monitorando a umidade do solo e indicando visualmente o estado da planta.
-
-
-# Canva de Modelagem Prática
 ## Descrição
 O Plantagochi é um projeto de vaso inteligente que visa resolver o problema de esquecimento ou desconhecimento sobre as necessidades de rega das plantas. Ele serve como um "digital pet" no mundo real, monitorando a umidade do solo e indicando visualmente o estado da planta.
 A ideia é misturar características de pets digitais e colecionáveis digitais com o mundo real. Para o MVP (Mínimo Produto Viável), o projeto se concentra em fornecer uma interface local de monitoramento e rega. Futuramente, o conceito pode ser expandido para modelar diversas espécies de plantas e incluir comunicação à distância.
-
 
 ## Objetivos
 - Monitorar continuamente a umidade do solo da planta.
