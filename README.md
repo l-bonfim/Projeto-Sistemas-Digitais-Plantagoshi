@@ -47,7 +47,7 @@ LED VERMELHO: Solo enxarcada (Planta sobrecarregada).
 - Placa Arduino Uno
 - Sensor de umidade do solo
 - Bomba de água submersível (mini bomba)
-- Módulo relé (para acionar a bomba)
+- Módulo relé ou NPN (para acionar a bomba)
 - 3 x LEDs (Vermelho, Amarelo/Laranja, Verde)
 - 3 x Resistores (para os LEDs)
 - 1 x Botão (push-button)
@@ -60,11 +60,12 @@ LED VERMELHO: Solo enxarcada (Planta sobrecarregada).
 - Mangueira fina (4mm)
 
 ## Protótipo
-// falta colocar um esquema do prototipo (tipo print do tinkercad)
+![Esquema conceitual do projeto plantagochi.](site\img\Esquema-plantagochi.png)
+
 
 ## Equipe
 - Lucas Bonfim (Líder Técnico) | [Linkedin](https://br.linkedin.com/in/l-bonfim), [Github](https://github.com/l-bonfim)
-- Lucas Carvalho | [Linkedin](), [Github](https://github.com/J4keless)
-- Lucas Valença | [Linkedin](), [Github](https://github.com/LucasGuilhermeValenca)
-- Leo Sk8 | [Linkedin](), [Github]()
+- Lucas Carvalho | [Github](https://github.com/J4keless)
+- Lucas Valença | [Linkedin](https://www.linkedin.com/in/lucas-valen%C3%A7a-411852339/), [Github](https://github.com/LucasGuilhermeValenca)
+- Leonardo Tiago Costa Freitas | [Linkedin](https://www.linkedin.com/in/leonardo-tiago-a7304b2a7), [Github](https://github.com/itzLeo98)
 - Miguel Duarte | [Linkedin](https://br.linkedin.com/in/miglitopictures), [Github](https://github.com/miglitopictures)
