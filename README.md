@@ -55,7 +55,7 @@ LED VERMELHO: Solo enxarcada (Planta sobrecarregada).
 - Mangueira fina (4mm)
 
 ## Protótipo
-![Esquema conceitual do projeto plantagochi.](site\img\Esquema-plantagochi.png)
+![Esquema conceitual do projeto plantagochi.](site/img/Esquema-plantagochi.png)
 
 
 ## Equipe
