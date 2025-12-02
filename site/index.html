@@ -111,42 +111,42 @@
                 <li>
                     <h4>Preparo do Reservatório</h4>
                     <p><strong>Posicione a Mini Bomba d'água</strong> dentro do reservatório e fixe a mangueira na saída. Certifique-se de que a bomba esteja submersa quando o reservatório estiver com água.</p>
-                    <img src="passo1_reservatorio.png" alt="Diagrama de conexão dos LEDs">
+                    <!-- <img src="passo1_reservatorio.png" alt="Diagrama de conexão dos LEDs"> -->
                 </li>
                 <li>
                     <h4>Arduino na protoboard</h4>
                     <p>Conecte o Arduino e a protoboard e crie as trilhas de alimentação (<b>5V</b>) e terra (<b>GND</b>) utilizando os jumpers. Isso facilitará as conexões dos demais componentes.</p>
-                    <img src="passo2_arduino.png" alt="Diagrama de conexão dos LEDs">
+                    <!-- <img src="passo2_arduino.png" alt="Diagrama de conexão dos LEDs"> -->
                 </li>
                 <li>
                     <h4>Conexão dos LEDs e Resitores</h4>
                     <p>Ligue os <b>LEDs (com resistores de 220Ω ou similar)</b> aos pinos digitais do Arduino (Ex: D2, D3, D4). O cátodo (perna menor) de cada LED deve ir para o GND.</p>
-                    <img src="passo3_leds.png" alt="Diagrama de conexão dos LEDs">
+                    <!-- <img src="passo3_leds.png" alt="Diagrama de conexão dos LEDs"> -->
                 </li>
                 <li>
                     <h4>Conexão do Botão</h4>
                     <p>Conecte um <b>botão de pressão</b> (para acionamento manual da bomba ou <b>reset</b> ) ao pino digital D7 do Arduino e à linha de GND, utilizando a configuração <b>pull-up</b> no código ou um resistor <b>pull-down</b> físico.</p>
-                    <img src="passo4_button.png" alt="Diagrama de conexão do sensor">
+                    <!-- <img src="passo4_button.png" alt="Diagrama de conexão do sensor"> -->
                 </li>
                 <li>
                     <h4>Conexão do Sensor de Umidade</h4>
                     <p>Conecte o pino analógico do sensor de umidade capacitivo à porta <b>A0 do Arduino</b>. O VCC e GND do sensor devem ser conectados à alimentação do circuito (5V e GND).</p>
-                    <img src="passo5_sensor.png" alt="Diagrama de conexão do sensor">
+                    <!-- <img src="passo5_sensor.png" alt="Diagrama de conexão do sensor"> -->
                 </li>
                 <li>
                     <h4>Conexão da Bomba e Relay</h4>
                     <p>Conecte o <b>Módulo Relé</b> a um pino digital do Arduino (Ex: D8). O relé deve ser ligado à bomba e à <b>fonte de alimentação externa</b> para isolar o Arduino da carga de alta corrente da bomba.</p>
-                    <img src="passo6_bomba.png" alt="Diagrama de conexão do sensor">
+                    <!-- <img src="passo6_bomba.png" alt="Diagrama de conexão do sensor"> -->
                 </li>
                 <li>
                     <h4>Conexão da Fonte Externa</h4>
                     <p>Ligue a <b>fonte de alimentação externa</b> (geralmente 9V ou 12V) ao circuito de alta potência, que inclui o Módulo Relé e a Mini Bomba. O Arduino pode ser alimentado via USB ou pela própria fonte externa regulada.</p>
-                    <img src="passo7_fonte.png" alt="Diagrama de conexão do sensor">
+                    <!-- <img src="passo7_fonte.png" alt="Diagrama de conexão do sensor"> -->
                 </li>
                 <li>
                     <h4>Inserção do sensor de humidade</h4>
                     <p>Insira o sensor de umidade na terra da planta.</p>
-                    <img src="passo8_planta.png" alt="Diagrama de conexão do sensor">
+                    <!-- <img src="passo8_planta.png" alt="Diagrama de conexão do sensor"> -->
                 </li>
             </ol>
         </section>
@@ -263,6 +263,8 @@
     <p>Link para o repositório completo do código no GitHub:</p>
     <a href="https://github.com/l-bonfim/Projeto-Sistemas-Digitais-Plantagoshi" target="_blank">Acessar Código Completo no GitHub</a>
 </section>
+
+<!--
 <hr>
 <section id="video">
     <h2>Vídeo Tutorial</h2>
@@ -270,7 +272,7 @@
     <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qs_-emj1qR4" frameborder="0" allowfullscreen></iframe>
     </div>
-</section>
+</section> -->
 <hr>
 <section id="licoes">
     <h2>Problemas e Lições Aprendidas</h2>
