@@ -205,7 +205,8 @@ code {
 
 .btn-download:hover {
     background-color: #2e7d32; /* Um verde ligeiramente mais escuro */
-    text-decoration: none;
+    color: var(--cor-texto);
+    /* text-decoration: none; */
     transform: translateY(-2px);
 }
 
